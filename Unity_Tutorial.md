@@ -81,7 +81,7 @@
   - 事实上是可以的，现行的JVM 会选择解释执行某些代码，而不全部编译的原因在于：很多手机引用受限于磁盘大小，太多的应用程序会占用固有的空间。
 - android 应用程序是运行在JVM嘛？
   - 会有Msbuild等类似的东西转换成DVM bytecode变成 dex然后执行
-- 什么是Android 的getIntent？ 是从哪里传过来的呢？
+- 为什么MyApplication里的api可以传给IWXAPIEventHandler呢？ 我们能看到getIntent的是什么东西嘛？为什么要把这个函数传到handleIntent里面去呢？这个是只在初始化的时候被调用了嘛？
 - 什么是 返回code的回调接口， 为什么把一个接口传给函数 作为参数呢？
 - 什么是类中的类，或者类中的接口？
 - 需不需要更改到wxapi文件夹目录下面去呢？
@@ -89,3 +89,7 @@
 - new WeChatCode() {} 这个声明到底干了什么事情呢？
 - 这个应用里的Android Application 有什么用？ 是singleton嘛？这个Application在什么时候被初始化呢？
 - initWeiXin干了什么事，授权域应该怎么写？
+- Java 静态方法不能直接访问非静态成员
+- new WXEntryActivity.WeChatCode() 创建了一个 接口的实例？为什么有一个 mWeChatCode 的public static 变量在这个类里面呢？（[教程里是说一个成员变量](https://www.ibm.com/developerworks/cn/java/j-perry-nested-classes/index.html)）
+  - 这里其实是 创建了一个 接口的引用（可以把接口类似于一个抽象类），这个引用并没有绑定到任何实例，但是之后会被绑定到一个子类实例上从而实现多态。
+- 这又引入了一个问题，Java中是怎么区分引用的值的呢？我怎么知道我当前的变量是一个引用还是一个确实存在的值呢？看一下Java中的4种引用类型
