@@ -93,3 +93,7 @@
 - new WXEntryActivity.WeChatCode() 创建了一个 接口的实例？为什么有一个 mWeChatCode 的public static 变量在这个类里面呢？（[教程里是说一个成员变量](https://www.ibm.com/developerworks/cn/java/j-perry-nested-classes/index.html)）
   - 这里其实是 创建了一个 接口的引用（可以把接口类似于一个抽象类），这个引用并没有绑定到任何实例，但是之后会被绑定到一个子类实例上从而实现多态。
 - 这又引入了一个问题，Java中是怎么区分引用的值的呢？我怎么知道我当前的变量是一个引用还是一个确实存在的值呢？看一下Java中的4种引用类型
+- Unity 出现 NoClassDefFoundError 是什么个意思呢？有没有更好的调试方法呢？
+- 现在要做的事情，如何把code给拿出来，它本身给我的接口没有一个存储code的地方，我是要更改一下那个接口呢？还是要做点别的事情呢？
+- 为什么在外部类之外创建一个内部类的实例，这个实例可以有成员变量嘛？如果可以有的话，能在外面访问嘛？
+- Java 的Classpath是干什么的？
