@@ -1,0 +1,42 @@
+## Wechat Server Manual
+
+#### 1. kfsGate/kfsWebservice/
+
+Django use **views** to handle requests, and these request urls are mapped to a function in a python file. (Mapping was done through the **urls.py**). Files under kfsWebservice handle with request come from agent and client and other places, and place them in different files.
+
+##### kfsAgentService.py 
+
+- Ques : changeMMR() ?
+- Ques : is the changeMMR() been modified to Django Database?
+- Ques : why it is a second level agent service API?
+- Ques : why kfsUpdateUserStatisticAfterGame() is an individual function? Shouldn't we just do it automatically after game finish?
+
+##### kfsClientService.py
+
+- Ques : why the naming in this file is capped? 
+- Never use another function's attribute with a string name!
+- Ques : Where is the function that "really does something" ? We can see the control is transferred through service handler, and the actual function definition is in 
+- Ques : the last few functions weren't named properly. Do we need to change that? (no CL at the end)
+- Ques : what is JPush ?
+- service handler and corresponding function names are store in configure files. Src code is stored in kfsService
+
+#### 2. kfsGate/kfsDjangoRequest/
+
+#### 3. kfsGate/kfsGateIntegrationTest/
+
+#### 4. kfsGate/kfsMatchmaking/
+
+#### 5. kfsLib/kfsService/
+
+1. kfsAgentHttpService.py
+
+#### 6. General
+
+- why models.py is placed at the outermost dir? Can this path be configured in settings.py?
+
+
+
+
+
+
+
