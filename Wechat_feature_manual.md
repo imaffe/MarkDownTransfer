@@ -59,16 +59,43 @@ url(r'^client/wxregisterandlogin/', kfsWechatRegisterAndLoginCL.as_view()),
 #### 5. Data Flow
 
 ```flow
-flow
-client=>start: Client
-openidCheck=>operation: Click and Check openId
-cond_openidCheck=>condition: Has open_id ?
-sendopenId=>operation: send openId to server
-getAuthCode=>end: get authcode from weixin and send
-cond_expireCheck=>condition:refresh token expired?
+st1=>start: Client
+op1=>operation: Click and Check openId
+cond1=>condition: Has open_id ?
+op2=>operation: send openId to server
+end1=>end: get authcode and send
+cond2=>condition: token expired?
+end3=>end: complete
+op4=>operation: receive if expired from server
+end2=>end: get authcode and send
 
-client->openidCheck->cond_openidCheck
-cond_openidCheck(yes)->sendopenId
-cond_openidCheck(no)->getAuthCode
+st1->op1->cond1
+cond1(no)->end1
+cond1(yes)->op2->op4->cond2
+cond2(no)->end3
+cond2(yes)->end2
 
 ```
+
+```flow
+st=>start: server
+op1=>operation: find refresh token
+op2=>operation: get userinfo
+op3=>operation: normal login, regain refresh token
+op4=>operation: register user, get refresh token
+op5=>operation: need authcode from client
+op6=>operation: refresh refresh token
+cond1=>condition: open_id none?
+cond2=>condition: does user exist?
+cond3=>condition: refresh token expired?
+
+st->cond1
+cond1(yes)->op2->cond2
+cond1(no)->op1->cond3
+cond2(yes)->op3
+cond2(no)->op4
+cond3(yes)->op5
+cond3(no)->op6
+
+```
+
