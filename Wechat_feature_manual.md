@@ -31,12 +31,13 @@ File under dir **kfs/kfsLib/kfsService/**. And this is the function that really 
 def wechatRegisterAndLoginCL(self, openId, authCode, device, clientVersion):
     """
     Description : 
-    	
+    	will return error message 
+    	{
+    	'result': 'error', 
+    	'message': "INVALID_REFRESH_TOKEN" ,
+    	}
+    	if need client to get authcode
     """
-```
-
-```python
-def wechatRegisterCL(self, ):
 ```
 
 #### 3.kfsWechat.py
