@@ -37,6 +37,7 @@ def wechatRegisterAndLoginCL(self, openId, authCode, device, clientVersion):
     	'message': "INVALID_REFRESH_TOKEN" ,
     	}
     	if need client to get authcode
+    	return normal 'success' if login success
     """
 ```
 
@@ -48,13 +49,18 @@ File under dir **kfsLib/kfsCore/**
 - **getWXApiResponse**(authCode) : use auth code to get an initial access token and refresh token and openId
 - **getUserInfo**(openId, accessToken) : use openId and access token to get some basic information of the user
 
-#### 4. urls.py
+#### 4. urls.py & configs & and logs
 
 ```
 # added a new line
 ...
 url(r'^client/wxregisterandlogin/', kfsWechatRegisterAndLoginCL.as_view()),
 ...
+
+
+# in DjangoConfig.yaml in userService Section
+# Why in kfsUserService.py we didn't see any Log information
+
 ```
 
 #### 5. Data Flow
@@ -99,4 +105,10 @@ cond3(yes)->op5
 cond3(no)->op6
 
 ```
+
+#### 6. Bug Log
+
+urllib2 : Errno 2 Name or Service not known. When i call the getUserInfo it will raise this bug, but the former requests can work fine
+
+​		might seems have something to do with proxy
 
