@@ -55,6 +55,10 @@ calculate the chain delay with N routers
   - DNS caching : hierarchy DNS server 
     - recursive and iterative
   - DNS record and messages
+- P2P
+  - BitTorrent Protocols
+  - IGNORE:  compare c/s and p2p scalability
+  - IGNORE : DHT detail of the last 2 points
 
 ## Questions
 
@@ -80,3 +84,7 @@ calculate the chain delay with N routers
 - what is MX record ? why web server and mail server can both be called enterprise.com
 - why DNS use UDP ? any historical considerations ?
 - How to know my local DNS server 
+- How do i guarantee that the server is authorized host for a domain ?  only the bit ? cannot forge one?
+- how to use nslookup program
+- registrar usi TLD server ?
+- what does Cloudfare do in this point of view !
