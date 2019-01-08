@@ -60,6 +60,20 @@ calculate the chain delay with N routers
   - IGNORE:  compare c/s and p2p scalability
   - IGNORE : DHT detail of the last 2 points
 
+#### Transportation Layer
+
+- implemented in end systems not in net routers 
+- sockets
+  - Dest Port and Src Port : How many sockets in total !
+  - sockets and connection !
+  - UDP socket and TCP socket is very different, one is 2 tuple and other is 4 tuple,
+  - TCP segment with different source address will go to different socket
+  - welcome and connection socket
+- UDP
+  - UDP segment structure and checksum
+
+
+
 ## Questions
 
 - routers
@@ -84,7 +98,21 @@ calculate the chain delay with N routers
 - what is MX record ? why web server and mail server can both be called enterprise.com
 - why DNS use UDP ? any historical considerations ?
 - How to know my local DNS server 
+  <<<<<<< HEAD
 - How do i guarantee that the server is authorized host for a domain ?  only the bit ? cannot forge one?
 - how to use nslookup program
 - registrar usi TLD server ?
-- what does Cloudfare do in this point of view !
+- what can Cloudware do
+- NEXT 
+- where is TCP and UDP code ? hardware of software implementation ?
+- what is the entity of the socket ? any code for this ? 
+- in TCP, a port can have multiple sockets? because
+- port and sockets ? is port hardware implementation, or socket is just a data strucutre, how is port related to sockets
+- does UDP have socket? or just port ?
+- what  does packet loss rate in FPS or MOBA games mean? do they use UDP ?
+- doesn't UDP segment have Src and Dst IP address? How would this happen ? No IP address ? Then
+- Something is wrong on page 194,  first paragraph. One says it has IP address the other say it only has port number. how does UDP know the return address (src address) if want to send message back ?
+- Is UDP IP address stored in IP header ? 
+- can a client port send to different server, build different connection using the same source port ?
+
+what does Cloudfare do in this point of view !
