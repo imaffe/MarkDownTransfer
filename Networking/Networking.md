@@ -55,6 +55,10 @@ calculate the chain delay with N routers
   - DNS caching : hierarchy DNS server 
     - recursive and iterative
   - DNS record and messages
+- P2P
+  - BitTorrent Protocols
+  - IGNORE:  compare c/s and p2p scalability
+  - IGNORE : DHT detail of the last 2 points
 
 #### Transportation Layer
 
@@ -94,6 +98,11 @@ calculate the chain delay with N routers
 - what is MX record ? why web server and mail server can both be called enterprise.com
 - why DNS use UDP ? any historical considerations ?
 - How to know my local DNS server 
+  <<<<<<< HEAD
+- How do i guarantee that the server is authorized host for a domain ?  only the bit ? cannot forge one?
+- how to use nslookup program
+- registrar usi TLD server ?
+- what can Cloudware do
 - NEXT 
 - where is TCP and UDP code ? hardware of software implementation ?
 - what is the entity of the socket ? any code for this ? 
@@ -104,3 +113,6 @@ calculate the chain delay with N routers
 - doesn't UDP segment have Src and Dst IP address? How would this happen ? No IP address ? Then
 - Something is wrong on page 194,  first paragraph. One says it has IP address the other say it only has port number. how does UDP know the return address (src address) if want to send message back ?
 - Is UDP IP address stored in IP header ? 
+- can a client port send to different server, build different connection using the same source port ?
+
+what does Cloudfare do in this point of view !
