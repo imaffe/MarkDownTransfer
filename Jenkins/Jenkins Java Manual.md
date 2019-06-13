@@ -46,3 +46,28 @@
 - How to see the source code of a lib imported in Intellij ? How trace to the root of the code?
 - what is the decorator used in methods rather than classes?
 - basically the @ is not decorator in java. It is called Annotation ! Then what is an annotation ? Very interesting ! 
+- what does it mean by unchecked annotation ? The unchecked warning can occur when interfacing with legacy code written before the advent of generics.
+- what is the difference between three @Retention annotation ? 
+- If you are interested, you can read the Checker Framework for third-party annotation modules.
+- ABOUT GENERICS
+- A type variable can be any non-primitive type even another type variable? How would that happen?
+  - is it like a generic class has a generic attribute ?
+- what is autoboxing ? 
+- 
+- what is legacy code ? 
+- type erasure has something to do with the raw type of generics so i decide to omit it.
+- why extends  in type bound can mean either extends or implements
+- do we have an 'or' in upper type bound ? 
+- How to create subtype-like relationship between two generic classes when the type parameters are related with Wildcard and subtyping
+- can an interface extend a clasBuildStepDescriptors ?  ?  No the answer is they cannot.
+- what is target typing ?
+- why using ? instead of a specific one ? 
+- so a generic method can not having a <> type parameter ? 
+- SO BY NOW I ROUGHLY CAN READ THE GUIDELINES OF JENKINS LETS START WITH THE JENKINS!
+- how to use @Nonnull annotation in most cases ? 
+- what is reflection in Java ?
+- interface A<T extends A<T>> This representation is really weird but useful !
+- what is dynamic proxies ? 
+- what is Class Object and The totorial ? 
+- I have a class A, and A use B, but i only imported A, will it auto import B ?
+- Know what is IO stream in Java !

@@ -8,6 +8,8 @@ login to mysql
 
 #### MySQL commands
 
+show databases;
+
 SELECT UID, Name 
 
 FROM userBasic
